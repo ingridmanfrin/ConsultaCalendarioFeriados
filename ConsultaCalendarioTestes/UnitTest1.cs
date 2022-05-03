@@ -15,6 +15,13 @@ namespace ConsultaCalendarioTestes
             Assert.NotEmpty(feriadoFixo.NomeFeriado);
             Assert.True(feriadoFixo.NomeFeriado == "Ano novo");
 
+            var feriadoNatal = FeriadoFixo.ConsultarFeriadoFixo(25, 12, 2022);
+
+            Assert.NotNull(feriadoNatal);
+            Assert.True(feriadoNatal.Feriado == true);
+            Assert.NotEmpty(feriadoNatal.NomeFeriado);
+            Assert.True(feriadoNatal.NomeFeriado == "Natal");
+
         }
     }
 }
